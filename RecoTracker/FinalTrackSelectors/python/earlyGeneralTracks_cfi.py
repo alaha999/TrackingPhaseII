@@ -74,6 +74,27 @@ _forPhase1 = dict(
 )
 trackingPhase1.toModify(earlyGeneralTracks, **_forPhase1)
 
+#from Configuration.Eras.Modifier_trackingPhase2PU140_cff import trackingPhase2PU140
+#_forPhase2 = dict(
+#    trackProducers = [
+#        'initialStepTracks',
+#        'highPtTripletStepTracks',
+#        'lowPtQuadStepTracks',
+#        'lowPtTripletStepTracks',
+#        'detachedQuadStepTracks',
+#        'pixelPairStepTracks',
+#    ],
+#    inputClassifiers = [
+#        "initialStepSelector",
+#        "highPtTripletStepSelector",
+#        "lowPtQuadStepSelector",
+#        "lowPtTripletStepSelector",
+#        "detachedQuadStepSelector",
+#        "pixelPairStepSelector",
+#    ],
+#)
+#trackingPhase2PU140.toModify(earlyGeneralTracks, **_forPhase2)
+
 # For Phase2PU140
 from Configuration.Eras.Modifier_trackingPhase2PU140_cff import trackingPhase2PU140
 from RecoTracker.FinalTrackSelectors.trackListMerger_cfi import trackListMerger as _trackListMerger
