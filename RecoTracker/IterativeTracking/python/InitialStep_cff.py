@@ -384,7 +384,7 @@ trackingPhase2PU140.toModify(initialStepSelector,
         ), #end of vpset
 ) #end of clone
 
-
+fastSim.toModify(initialStepSelector,vertices = "firstStepPrimaryVerticesBeforeMixing")
 
 # Final sequence
 InitialStepTask = cms.Task(initialStepSeedLayers,
@@ -422,8 +422,8 @@ _InitialStepTask_fastSim = cms.Task(initialStepTrackingRegions
                            ,firstStepPrimaryVerticesBeforeMixing
                            #,initialStepTrackRefsForJets
                            #,firstStepPrimaryVertices
-                           ,initialStepClassifier1,initialStepClassifier2,initialStepClassifier3
-                           #,initialStepSelector
-                           ,initialStep
+                           #,initialStepClassifier1,initialStepClassifier2,initialStepClassifier3
+                           ,initialStepSelector
+                           #,initialStep
                            )
 fastSim.toReplaceWith(InitialStepTask, _InitialStepTask_fastSim)

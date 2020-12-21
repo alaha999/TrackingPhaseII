@@ -369,7 +369,7 @@ trackingPhase2PU140.toModify(lowPtTripletStepSelector,
         ), #end of vpset
 ) #end of clone
 
-
+fastSim.toModify(lowPtTripletStepSelector, vertices = "firstStepPrimaryVerticesBeforeMixing")
 
 # Final sequence
 LowPtTripletStepTask = cms.Task(lowPtTripletStepClusters,
@@ -397,5 +397,5 @@ fastSim.toReplaceWith(LowPtTripletStepTask,
                                    ,lowPtTripletStepSeeds
                                    ,lowPtTripletStepTrackCandidates
                                    ,lowPtTripletStepTracks  
-                                   ,lowPtTripletStep   
+                                   ,lowPtTripletStepSelector   
                                    ))

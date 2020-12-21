@@ -405,6 +405,7 @@ trackingPhase2PU140.toModify(pixelPairStepSelector,
     vertices = "firstStepPrimaryVertices"
 ) #end of clone
 
+fastSim.toModify(pixelPairStepSelector, vertices = "firstStepPrimaryVerticesBeforeMixing")
 
 # Final sequence
 PixelPairStepTask = cms.Task(pixelPairStepClusters,
@@ -442,6 +443,6 @@ fastSim.toReplaceWith(PixelPairStepTask,
                                    ,pixelPairStepSeeds
                                    ,pixelPairStepTrackCandidates
                                    ,pixelPairStepTracks
-                                   ,pixelPairStep 
+                                   ,pixelPairStepSelector 
                                    )
 )

@@ -303,7 +303,7 @@ highPtTripletStepSelector = RecoTracker.FinalTrackSelectors.multiTrackSelector_c
             ),
     ] #end of vpset
 ) #end of clone
-
+fastSim.toModify(highPtTripletStepSelector, vertices ="firstStepPrimaryVerticesBeforeMixing")
 # Final sequence
 HighPtTripletStepTask = cms.Task(highPtTripletStepClusters,
                                  highPtTripletStepSeedLayers,
@@ -330,5 +330,5 @@ fastSim.toReplaceWith(HighPtTripletStepTask,
                                ,highPtTripletStepSeeds
                                ,highPtTripletStepTrackCandidates
                                ,highPtTripletStepTracks
-                               ,highPtTripletStep
+                               ,highPtTripletStepSelector
                                ) )
